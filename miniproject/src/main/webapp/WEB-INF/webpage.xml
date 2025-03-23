@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  mvc : mvc가 기본형태가 됐을 때 Spring에서 기본으로 MVC형태 코드를 작성하며 실행이 됨  -->
-<beans:beans xmlns="http://www.springframework.org/schema/mvc"
-			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-			 xmlns:context="http://www.springframework.org/schema/context"
-			 xmlns:beans="http://www.springframework.org/schema/beans"
-			 xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-			   					 http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
-			   					 http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-	<!--  @를 이용하여 각 class 별로 MVC 형태 구현함  -->
-	<annotation-driven/>
-	<!--  resources : 패키지를 정하여 설정하는 태그 //지금은 그냥 다풀어둠 원래 이렇게 안씀  -->
-	<resources location="/" mapping="/**"/>
-	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<beans:property name="prefix" value="/"/>
-		<!--  공부할라고 잠깐 보안열어둠 신경 ㄴ  -->
-		<beans:property name="suffix" value=".jsp"/>
-		<!--  suffix : 어떤 파일을 View로 만들지  -->
+<beans:beans
+	xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+   http://www.springframework.org/schema/beans/spring-beans.xsd 
+      http://www.springframework.org/schema/context 
+      http://www.springframework.org/schema/context/spring-context.xsd 
+      http://www.springframework.org/schema/mvc 
+      http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+	<!-- @를 이용하여 각 class 별로 MVC 형태 구현함 -->
+	<annotation-driven></annotation-driven>
+
+	<!-- resources : 패키지를 정하여 설정하는 태그 //지금은 그냥 다풀어둠 원래 이렇게 안씀 -->
+	<resources location="/" mapping="/**"></resources>
+
+	<!-- 어떤형태로 파일을 보여지게 할지 설정 -->
+	<beans:bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/"></beans:property>
+		<beans:property name="suffix" value=".jsp"></beans:property>
 	</beans:bean>
-	<context:component-scan base-package="miniproject"/>
-	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<beans:property name="defaultEncoding" value="utf-8"/>
-		<beans:property name="maxUploadSize" value="-1"/>
-		<!--  업로드 파일 최대 용량  -->
-		<beans:property name="maxInMemorySize" value="2097152"/>
-		<!--  2MB  -->
+
+	<!-- 어노테이션사용할 패키지 설정 -->
+	<context:component-scan
+		base-package="miniproject" />
+
+	<!-- I/O 사용 -->
+	<beans:bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beans:property name="defaultEncoding" value="utf-8" />
+		<beans:property name="maxUploadSize" value="-1" />	<!-- 업로드 파일 최대 용량 제한해두면 서버가 죽어버림 그래서 -1로 설정 -->
+		<beans:property name="maxInMemorySize" value="2097152" />	<!-- 2MB -->
 	</beans:bean>
+
 </beans:beans>
