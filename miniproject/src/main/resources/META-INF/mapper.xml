@@ -3,5 +3,8 @@
 
 <mapper namespace="miniproject.index_mapper">
 
+	<select id="copyright_select" resultType="copyrightdto">
+		select * from web_info
+	</select>
 
 </mapper>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="cr" uri="http://java.sun.com/jsp/jstl/core"%>
 <div class="copyright">
 	<ol>
 		<li><img src="./logo/e_click_logo.png" class="logos"></li>
@@ -25,12 +26,14 @@
 		</li>
 		<li>
 			<ul>
-				<li>e-Click 주식회사 | 대표 : 홍길동</li>
-				<li>서울특별시 종로구 3가 국일빌딩 5F</li>
-				<li>사업자번호 : 211-81-12345 | 통신판매업 : 2023-서울종로-1234호</li>
-				<li>정보보호책임자 : 홍길동</li>
-				<li>영업문의 : 02-123-5678</li>
-				<li>팩스번호 : 02-550-1234</li>
+				<cr:forEach var="crdata" items="${crList }">
+					<li>${crdata.company_name}| 대표 : ${crdata.ceo_name}</li>
+					<li>${crdata.company_address}</li>
+					<li>사업자번호 : ${crdata.business_number} | 통신판매업 : ${crdata.commerce_number}</li>
+					<li>정보보호책임자 : ${crdata.security_officer}</li>
+					<li>영업문의 : ${crdata.contact_number}</li>
+					<li>팩스번호 : ${crdata.fax_number}</li>
+				</cr:forEach>
 			</ul>
 		</li>
 	</ol>

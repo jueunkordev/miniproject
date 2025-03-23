@@ -35,7 +35,7 @@
 	</main>
 	<!-- 카피라이터 -->
 	<footer>
-		<cr:import url="./copyright.jsp"></cr:import>
+		<cr:import url="./copyright.do"></cr:import>
 	</footer>
 </body>
 </html>
