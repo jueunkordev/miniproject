@@ -27,13 +27,13 @@
 		<li>
 			<ul>
 				<cr:forEach var="crdata" items="${crList }">
-					<li>${crdata.company_name}|대표 : ${crdata.ceo_name}</li>
-					<li>${crdata.company_address}</li>
-					<li>사업자번호 : ${crdata.business_number} | 통신판매업 :
-						${crdata.commerce_number}</li>
-					<li>정보보호책임자 : ${crdata.security_officer}</li>
-					<li>영업문의 : ${crdata.contact_number}</li>
-					<li>팩스번호 : ${crdata.fax_number}</li>
+					<li>${crdata.corp_name}|대표 : ${crdata.ceo_name}</li>
+					<li>${crdata.corp_address}</li>
+					<li>사업자번호 : ${crdata.creg_num} | 통신판매업 :
+						${crdata.cmob_num}</li>
+					<li>정보보호책임자 : ${crdata.csec_officer}</li>
+					<li>영업문의 : ${crdata.corp_num}</li>
+					<li>팩스번호 : ${crdata.cfax_num}</li>
 				</cr:forEach>
 			</ul>
 		</li>

@@ -17,4 +17,9 @@ package miniproject;
  		List<copyright_DTO> crList = this.st.selectList("copyright_select");
  		return crList;
  	}
+ 	
+ 	public List<mdchoice_DTO>mdchoice_select() {
+ 		List<mdchoice_DTO> mdList = this.st.selectList("mdchoice_select");
+ 		return mdList;
+ 	}
  }

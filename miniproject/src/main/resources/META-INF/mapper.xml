@@ -6,5 +6,9 @@
 	<select id="copyright_select" resultType="copyrightdto">
 		select * from web_info
 	</select>
+	
+	<select id="mdchoice_select" resultType="mdchoicedto">
+		select * from md_choice
+	</select>
 
 </mapper>

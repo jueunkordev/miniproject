@@ -5,5 +5,7 @@
 	<typeAliases>
 		<typeAlias alias="copyrightdto"
 			type="miniproject.copyright_DTO" />
+		<typeAlias alias="mdchoicedto"
+			type="miniproject.mdchoice_DTO" />
 	</typeAliases>
 </configuration>

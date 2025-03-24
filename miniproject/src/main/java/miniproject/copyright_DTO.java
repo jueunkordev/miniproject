@@ -7,5 +7,5 @@ import lombok.Setter;
 @Setter
 public class copyright_DTO {
 	int cidx;
-	String company_name, ceo_name, company_address, business_number, commerce_number, security_officer, contact_number, fax_number;
+	String corp_name, ceo_name, corp_address, creg_num, cmob_num, csec_officer, corp_num, cfax_num;
 }

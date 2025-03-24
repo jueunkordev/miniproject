@@ -7,4 +7,5 @@ package miniproject;
  @Mapper
  public interface index_mapper {
  	List<copyright_DTO> copyright_select();
+ 	List<mdchoice_DTO> mdchoice_select();
  }

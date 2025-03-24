@@ -35,8 +35,8 @@ public class main_controller {
 	
 	@GetMapping("/mdchoice.do")
 	public String mdchoice(Model m) {
-		//List<mdchoice_DTO> mcList = this.dao.mdchoice_select();
-		//m.addAttribute("mcList", mcList);
+		List<mdchoice_DTO> mdList = this.dao.mdchoice_select();
+		m.addAttribute("mdList", mdList);
 		return "mdchoice";
 	}
 
