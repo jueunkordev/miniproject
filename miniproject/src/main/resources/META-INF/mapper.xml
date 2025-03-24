@@ -10,5 +10,9 @@
 	<select id="mdchoice_select" resultType="mdchoicedto">
 		select * from md_choice
 	</select>
+	
+	<select id="webinfo_select" resultType="webinfodto">
+		select * from building_info
+	</select>
 
 </mapper>

@@ -22,4 +22,9 @@ package miniproject;
  		List<mdchoice_DTO> mdList = this.st.selectList("mdchoice_select");
  		return mdList;
  	}
+ 	
+ 	public List<webinfo_DTO>webinfo_select() {
+ 		List<webinfo_DTO> wiList = this.st.selectList("webinfo_select");
+ 		return wiList;
+ 	}
  }

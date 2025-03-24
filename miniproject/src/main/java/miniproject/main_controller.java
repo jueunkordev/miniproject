@@ -28,8 +28,8 @@ public class main_controller {
 	
 	@GetMapping("/webinfo.do")
 	public String webinfo(Model m) {
-		//List<mdchoice_DTO> mcList = this.dao.mdchoice_select();
-		//m.addAttribute("mcList", mcList);
+		List<webinfo_DTO> wiList = this.dao.webinfo_select();
+		m.addAttribute("wiList", wiList);
 		return "webinfo";
 	}
 	
