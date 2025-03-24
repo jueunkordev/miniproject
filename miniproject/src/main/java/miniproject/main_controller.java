@@ -25,5 +25,19 @@ public class main_controller {
 		m.addAttribute("crList", crList);
 		return null;
 	}
+	
+	@GetMapping("/webinfo.do")
+	public String webinfo(Model m) {
+		//List<mdchoice_DTO> mcList = this.dao.mdchoice_select();
+		//m.addAttribute("mcList", mcList);
+		return "webinfo";
+	}
+	
+	@GetMapping("/mdchoice.do")
+	public String mdchoice(Model m) {
+		//List<mdchoice_DTO> mcList = this.dao.mdchoice_select();
+		//m.addAttribute("mcList", mcList);
+		return "mdchoice";
+	}
 
 }

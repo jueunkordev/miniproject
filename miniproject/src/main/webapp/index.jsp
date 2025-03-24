@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>온라인 부동산 중개</title>
-<link rel="stylesheet" type="text/css" href="./css/index.css?v=7">
+<link rel="stylesheet" type="text/css" href="./css/index.css?v=10">
 </head>
 <body>
 	<!--최상단-->
@@ -24,12 +24,12 @@
 		</section>
 		<!--금주 분양 매물 정보 시작-->
 		<section>
-			<cr:import url="./webinfo.jsp"></cr:import>
+			<cr:import url="./webinfo.do"></cr:import>
 		</section>
 		<!--금주 분양 매물 정보 끝-->
 		<!--추천 분양 정보-->
 		<section>
-			<cr:import url="./mdchoice.jsp"></cr:import>
+			<cr:import url="./mdchoice.do"></cr:import>
 		</section>
 		<!--추천 분양 정보 끝-->
 	</main>
