@@ -328,6 +328,7 @@ main > section:nth-of-type(4) {
 }
 .recommend > .md_estates { 
   width: 1100px;
+  margin : 0 auto;
   height: auto;
 }
 .recommend > .md_estates > ul {
