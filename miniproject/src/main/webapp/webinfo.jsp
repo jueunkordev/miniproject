@@ -9,13 +9,18 @@
 	<div class="week_estates">
 		<ul>
 			<cr:forEach var="widata" items="${wiList}" begin="0" end="7">
-				<li><a> <span>${widata.b_status}</span>
+				<li>
+					<a href="./week_tails/?midx='${midx}'" target="_blank">
+						<span>${widata.b_status}</span>
 						<div>${widata.b_name}</div>
-						<aside>${widata.b_addr}</aside> <span>${widata.b_cate} | ${widata.b_lease_type}</span> <label>${widata.b_sale_date} | ${widata.b_movein_date}</label>
+						<aside>${widata.b_addr}</aside>
+						<span>${widata.b_cate} | ${widata.b_lease_type}</span>
+						<label>${widata.b_sale_date} | ${widata.b_movein_date}</label>
 						<div>
 							<img src="./room/${widata.b_img}">
 						</div>
-				</a></li>
+					</a>
+				</li>
 			</cr:forEach>
 		</ul>
 	</div>

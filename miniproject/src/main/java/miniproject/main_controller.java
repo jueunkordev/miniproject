@@ -7,6 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class main_controller {
@@ -39,5 +40,32 @@ public class main_controller {
 		m.addAttribute("mdList", mdList);
 		return "mdchoice";
 	}
+	
+	@GetMapping("/login.do")
+	public String login(Model m) {
+		return null;
+	}
+	
+	@PostMapping("/joinok.do")
+	public String joinok(member_DTO dto, Model m) throws Exception {
+	    int result = this.dao.member_insert(dto);
 
+	    String msg = "";
+	    if (result > 0) {
+	        msg = "alert('회원가입이 완료되었습니다.'); location.href='./login.jsp';";
+	    } else {
+	        msg = "alert('회원가입 error'); history.go(-1);";
+	    }
+
+	    m.addAttribute("msg", msg);
+
+	    return "index";
+	}
 }
+
+
+
+
+
+
+

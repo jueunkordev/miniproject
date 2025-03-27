@@ -5,9 +5,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>로그인</title>
-<link rel="stylesheet" type="text/css" href="./css/index.css?v=1">
-<link rel="stylesheet" type="text/css" href="./css/login.css?v=2">
+<link rel="stylesheet" type="text/css" href="./css/index.css?v=7">
+<link rel="stylesheet" type="text/css" href="./css/member_join.css?v=3">
 <style>
 .box {
 	width: 800px;
@@ -16,14 +15,15 @@
 	overflow: auto;
 }
 </style>
+<title>Insert title here</title>
 </head>
 <body>
 	<!--최상단-->
 	<cr:import url="./top.jsp"></cr:import>
 	<!--메뉴끝-->
-	<!-- 로그인 -->
-	<cr:import url="./login_view.jsp"></cr:import>
-	<!-- 로그인 끝 -->
+	<!-- 회원가입 -->
+	<cr:import url="./member_join_view.jsp"></cr:import>
+	<!-- 회원가입 끝 -->
 	<!-- 카피라이터 -->
 	<footer>
 		<cr:import url="./copyright.do"></cr:import>

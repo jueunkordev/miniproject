@@ -5,25 +5,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>로그인</title>
-<link rel="stylesheet" type="text/css" href="./css/index.css?v=1">
-<link rel="stylesheet" type="text/css" href="./css/login.css?v=2">
-<style>
-.box {
-	width: 800px;
-	height: 300px;
-	border: 1px solid black;
-	overflow: auto;
-}
-</style>
+<title>비밀번호 찾기</title>
+<link rel="stylesheet" type="text/css" href="./css/index.css?v=11">
+<link rel="stylesheet" type="text/css"
+	href="./css/passwd_search.css?v=3">
 </head>
 <body>
 	<!--최상단-->
 	<cr:import url="./top.jsp"></cr:import>
 	<!--메뉴끝-->
-	<!-- 로그인 -->
-	<cr:import url="./login_view.jsp"></cr:import>
-	<!-- 로그인 끝 -->
+	<!-- 비밀번호 찾기 -->
+	<cr:import url="./passwd_search_view.jsp"></cr:import>
+	<!-- 비밀번호 찾기 끝 -->
 	<!-- 카피라이터 -->
 	<footer>
 		<cr:import url="./copyright.do"></cr:import>

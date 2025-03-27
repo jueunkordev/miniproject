@@ -7,7 +7,7 @@
 			type="miniproject.copyright_DTO" />
 		<typeAlias alias="mdchoicedto"
 			type="miniproject.mdchoice_DTO" />
-			<typeAlias alias="webinfodto"
-			type="miniproject.webinfo_DTO" />
+		<typeAlias alias="webinfodto" type="miniproject.webinfo_DTO" />
+		<typeAlias alias="memberdto" type="miniproject.member_DTO" />
 	</typeAliases>
 </configuration>

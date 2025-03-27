@@ -14,5 +14,14 @@
 	<select id="webinfo_select" resultType="webinfodto">
 		select * from building_info
 	</select>
-
+	
+	<!-- 회원가입 -->
+	<insert id="member_insert">
+		insert into member (midx, memail, mpass, mname, mtel, msms, mdate) value ('0',#{memail}, #{mpass}, #{mname}, #{mtel}, #{msms},now())
+	</insert>
+	
+	<!-- 회원 정보 조회 -->
+	<select id="member_select" resultType="memberdto">
+        SELECT * FROM member ORDER BY midx DESC
+    </select>
 </mapper>
