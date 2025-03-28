@@ -14,6 +14,9 @@ public class main_controller {
 
 	@Resource(name = "index_DAO")
 	private index_DAO dao;
+	
+	@Resource(name = "md5_pass")
+	private md5_pass pass;
 
 	@GetMapping("/index.do")
 	public String index(Model m) {
@@ -48,8 +51,12 @@ public class main_controller {
 	
 	@PostMapping("/joinok.do")
 	public String joinok(member_DTO dto, Model m) throws Exception {
-	    int result = this.dao.member_insert(dto);
-
+	    // 비밀번호 암호화
+		String enc_pw = pass.md5_make(dto.getMpass());
+	    dto.setMpass(enc_pw);
+		
+		int result = this.dao.member_insert(dto);
+	    
 	    String msg = "";
 	    if (result > 0) {
 	        msg = "alert('회원가입이 완료되었습니다.'); location.href='./login.jsp';";
